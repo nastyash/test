@@ -40,5 +40,11 @@ gulp.task('html', function() {
         .pipe(minHtml({}))
         .pipe(gulp.dest(dirName));
 });
+//отслеживаем изменения в наших файликах
+gulp.task('watch', function() {
+    gulp.watch('./client/js/*.js', ['js']);
+    gulp.watch('./client/css/*.css', ['css']);
+    gulp.watch('./client/*.html', ['html']);
+});
 //запускаем всё это дело
-gulp.task('default', ['bower', 'css', 'js', 'html']);
+gulp.task('default', ['bower', 'css', 'js', 'html', 'watch']);

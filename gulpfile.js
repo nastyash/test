@@ -31,14 +31,14 @@ gulp.task('css', function() {
 //наши js
 gulp.task('js', function() {
     gulp.src('./client/js/*.js')
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(dirName));
 });
 //и html на последок
 gulp.task('html', function() {
-    gulp.src('./clients/*.html')
+    gulp.src('./client/*.html')
         .pipe(minHtml({}))
-        .pipe(gulp.dest(dirName));
+        .pipe(gulp.dest('./static'));
 });
 //отслеживаем изменения в наших файликах
 gulp.task('watch', function() {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+<head lang="en" ng-app>
+    <meta charset="UTF-8">
+    <title>My test</title>
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/test.css">
+    <script src="assets/jquery/dist/jquery.js"></script>
+    <script src="assets/angular/angular.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/test.js"></script>
+</head>
+<body  ng-controller="ShowFormCntrl">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <textarea class="form-control" rows="10" data-ng-model="typedText"></textarea>
+            <div class="tags-div margin-top-div">
+
+            </div>
+            <div class="input-group margin-top-div">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Choose tag
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Farming</a></li>
+                        <li><a href="#">Hockey</a></li>
+                        <li><a href="#">Coffee</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Add tag</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>{{currentText}}</p>
+            <div class="">
+                <span ng-repeat="tag in tags" class="{{tag.cssClass}} tag-css-class">{{tag.tagValue}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

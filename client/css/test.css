@@ -1,0 +1,26 @@
+.container-fluid {
+    margin-top: 40px;
+}
+.margin-top-div {
+    margin-top: 16px;
+}
+.btn-float-right {
+    float: right;
+}
+.tag-css-class {
+    padding: 2px 8px;
+    border-radius: 8px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 8px;
+    color: #fff;
+}
+.tag-css-class.red {
+    background-color: #c7254e;
+}
+.tag-css-class.blue {
+    background-color: #00b3ee;
+}
+.tag-css-class.green {
+    background-color: #419641;
+}
